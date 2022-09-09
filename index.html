@@ -7,7 +7,7 @@
     <title>Tecnovalidaciones SRL</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/fontello.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -25,9 +25,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script>
-        AOS.init();
-    </script>
 </head>
 <body>
     <header>
@@ -57,16 +54,16 @@
     </header>
     <section>
         <article class="eslogan">
-            <figure class="calificacion">
+            <figure class="calificacion" data-aos="fade-up" data-aos-duration="3000">
                 <img src="imagenes/calificacion.jpg" alt="Calificación" width="80%">
             </figure>
-            <p>Validación, Calificación y Mantenimiento de Áreas Controladas, Equipos de Flujo Laminar y Cabinas de Seguridad Biológica en Industria Farmacéutica. </p>
+            <p data-aos="zoom-in-up" data-aos-duration="1000">Validación, Calificación y Mantenimiento de Áreas Controladas, Equipos de Flujo Laminar y Cabinas de Seguridad Biológica en Industria Farmacéutica. </p>
         </article>
 
         <article class="servicios">
-            <h1>Nuestros Servicios</h1>
-
-            <div class="table__container">
+            <h1 data-aos="zoom-in-up" data-aos-duration="1000">Nuestros Servicios</h1>
+ 
+            <div class="table__container" data-aos="flip-right">
                 <table class="table" border="6 solid black">
                     <tr>
                         <th>Integridad de filtros HEPA</th>
@@ -154,6 +151,8 @@
         </section>        
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
