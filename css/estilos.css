@@ -112,8 +112,8 @@ nav ul li a:hover::before{
 	background:#03363d;
 	border-radius:20px;
 	-webkit-transition:-webkit-transform 0.3s ease-in-out 0.1s;
-    -moz-transition:-webkit-transform 0.3s ease-in-out 0.1s;
-    -o-transition:-webkit-transform 0.3s ease-in-out 0.1s;
+    -moz-transition:-moz-transform 0.3s ease-in-out 0.1s;
+    -o-transition:-o-transform 0.3s ease-in-out 0.1s;
 	box-shadow:#03363d 5px 5px 10px;
 }
 
