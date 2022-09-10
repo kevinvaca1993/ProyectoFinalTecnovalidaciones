@@ -7,6 +7,7 @@
     <title>Quienes Somos</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/fontello.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png"">
     <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
@@ -53,46 +54,48 @@
     </header>
     <section>
         <article class="eslogan">
-            <figure class="calificacion">
+            <figure class="calificacion" data-aos="fade-up" data-aos-duration="3000">
                 <img src="../imagenes/calificacion.jpg" alt="Calificación" width="80%">
             </figure>
-            <p>Validación, Calificación y Mantenimiento de Áreas Controladas, Equipos de Flujo Laminar y Cabinas de Seguridad Biológica en Industria Farmacéutica. </p>
+            <p data-aos="zoom-in-up" data-aos-duration="1000">Validación, Calificación y Mantenimiento de Áreas Controladas, Equipos de Flujo Laminar y Cabinas de Seguridad Biológica en Industria Farmacéutica. </p>
         </article>
         <article class="servicios">
-            <h1>Nuestra empresa</h1>
+            <h1 data-aos="zoom-in-up" data-aos-duration="1000">Nuestra empresa</h1>
             
             <section class="sub-servicios">
-                <p>TecnoValidaciones SRL es una empresa Nacional, creada hace mas de 20 años, enfocada a brindar servicio a la Industria Farmacéutica, cumpliendo las más altas exigencias de calidad que esta industria demanda. Cada servicio empleado, sigue las Buenas Prácticas de Fabricación (GMPs) y con Regulación Nacional (Disp. ANMAT 3827:2018) así como las internacionales (ISO, EU-GMP).</p>
-                <figure>
+                <p data-aos="fade-down-right" data-aos-duration="1000">TecnoValidaciones SRL es una empresa Nacional, creada hace mas de 20 años, enfocada a brindar servicio a la Industria Farmacéutica, cumpliendo las más altas exigencias de calidad que esta industria demanda. Cada servicio empleado, sigue las Buenas Prácticas de Fabricación (GMPs) y con Regulación Nacional (Disp. ANMAT 3827:2018) así como las internacionales (ISO, EU-GMP).</p>
+                <figure data-aos="fade-down-left" data-aos-duration="1000">
                     <img src="../imagenes/mediciones.jpg" alt="Mediciones" width="300" height="300">
                 </figure>
             </section>
 
             <section class="sub-servicios-a">
-                <figure>
+                <figure data-aos="fade-right" data-aos-duration="1000">
                     <img src="../imagenes/contador.jpg" alt="Contador" width="300" height="300">
                 </figure>
-                <P>Nuestro principal objetivo es brindar y cumplir con cada requerimiento de nuestros clientes. Contamos con especialistas que ven a detalle el funcionamiento de los equipos y areas productivas y logran realizar pruebas que de otra manera tendrían un costo mayor para la empresa, o un tiempo de ejecución prolongado.</P>
+                <P data-aos="fade-left" data-aos-duration="1000">Nuestro principal objetivo es brindar y cumplir con cada requerimiento de nuestros clientes. Contamos con especialistas que ven a detalle el funcionamiento de los equipos y areas productivas y logran realizar pruebas que de otra manera tendrían un costo mayor para la empresa, o un tiempo de ejecución prolongado.</P>
             </section>
 
             <section class="sub-servicios-b">
-                <p>Contamos con Instrumentos calificados y calibrados, para realizar las mediciones requeridas por las normas vigentes de la Industria Farmaceutica, para as pruebas de Validación, así como una oficina tecnica ubicada en la localidad de Villa Luzuriaga, donde desarrollamoslos protocolos, análisis de riesgos, planes de validación, y demás documentación, lo que nos hace la mejor opción para ejecutar su proyecto.</p>
-                <figure>
+                <p data-aos="fade-up-right" data-aos-duration="1000">Contamos con Instrumentos calificados y calibrados, para realizar las mediciones requeridas por las normas vigentes de la Industria Farmaceutica, para as pruebas de Validación, así como una oficina tecnica ubicada en la localidad de Villa Luzuriaga, donde desarrollamoslos protocolos, análisis de riesgos, planes de validación, y demás documentación, lo que nos hace la mejor opción para ejecutar su proyecto.</p>
+                <figure data-aos="fade-up-left" data-aos-duration="1000">
                     <img src="../imagenes/oficina.jpg" alt="Contador" width="300" height="300">
                 </figure>
             </section>
 
-            <h3>Nuestros servicios:</h3>
-            <section class="sub-servicios-b">
-                <ul>
-                    <li>Integridad de filtros HEPA</li>
-                    <li>Caudales y Renovaciones Horarias</li>
-                    <li>Conteo de particulas</li>
-                    <li>Medicion de presiones diferenciales</li>
-                    <li>Medicion de temperatura</li>
-                    <li>Medicion de humedad relativa</li>
-                </ul>
-            </section>
+            <div data-aos="flip-up" data-aos-duration="2000">
+                <h3>Nuestros servicios:</h3>
+                <section class="sub-servicios-b">
+                    <ul>
+                        <li>Integridad de filtros HEPA</li>
+                        <li>Caudales y Renovaciones Horarias</li>
+                        <li>Conteo de particulas</li>
+                        <li>Medicion de presiones diferenciales</li>
+                        <li>Medicion de temperatura</li>
+                        <li>Medicion de humedad relativa</li>
+                    </ul>
+                </section>
+            </div>
          </article>
     </section>
 
@@ -132,6 +135,9 @@
             </div>
         </section>        
     </footer>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
