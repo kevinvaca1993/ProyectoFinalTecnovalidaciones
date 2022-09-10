@@ -90,37 +90,13 @@ nav ul li a:hover::before{
     padding-bottom: 100px;
 }
 
-.clientes{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    gap: 15px;
-}
-
 .img{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    padding-top: 15px;
-    gap: 20px;
-}
+    gap: 15px;
 
-.img img{
-    padding:4px;
-	background:#03363d;
-	border-radius:20px;
-	-webkit-transition:-webkit-transform 0.3s ease-in-out 0.1s;
-    -moz-transition:-moz-transform 0.3s ease-in-out 0.1s;
-    -o-transition:-o-transform 0.3s ease-in-out 0.1s;
-	box-shadow:#03363d 5px 5px 10px;
-}
-
-.img img:hover{
-    -webkit-transform:scale(1.2);
-    -moz-transform:scale(1.2);
-    -o-transform: scale(1.2);
 }
 
 .servicios{
@@ -455,12 +431,6 @@ footer{
     border:3px solid #FFFFFF;  
     text-decoration: none;
     text-align: center;
-}
-
-.boton-arriba:hover{
-    background: rgb(0,26,36);
-    background: linear-gradient(50deg, rgba(0,26,36,1) 0%, rgba(9,47,121,0.19931722689075626) 28%, rgba(0,212,255,1) 100%);
-    color: white;
 }
 
 /*RESPONSIVE*/
