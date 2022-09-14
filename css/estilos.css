@@ -35,8 +35,13 @@ header h1{
     display: none;
 }
 
+.logo-visto{
+    padding-top: 15px;
+}
+
 nav{
     background-color: #f8f9f9;
+    padding-top: 15px;
 }
 
 nav ul{
@@ -48,6 +53,22 @@ nav ul{
 }
 
 nav ul li{
+    list-style-type: none;
+    background-color: #f8f9f9;
+    color:#03363d;
+    font: bold 14px verdana, sans-serif;
+    position: relative;
+}
+
+.menu_hambur{
+    display: none;
+}
+
+.container-fluid{
+    gap:15px;
+}
+
+.menu_hambur nav{
     list-style-type: none;
     background-color: #f8f9f9;
     color:#03363d;
@@ -74,6 +95,34 @@ nav ul li a::before{
 nav ul li a:hover::before{
     width: 100%;
 }
+
+#subir__arriba{
+    width: 45px;
+    height: 45px;
+    background: #94b1b1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: fixed;
+    cursor: pointer;
+    display: none;
+    bottom: 1%;
+    right: 1%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#subir__arriba:hover{
+    background: rgb(0,26,36);
+    background: linear-gradient(50deg, rgba(0,26,36,1) 0%, rgba(9,47,121,0.19931722689075626) 28%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+
 
 .eslogan{
     font: oblique 1.2em verdana, sans-serif;
@@ -176,14 +225,10 @@ nav ul li a:hover::before{
 .img__integridad{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0,5fr 0,5fr;
     grid-template-areas: "img1 img2" "txt1 txt2";
-    grid-row-gap: 15px;
-    grid-column-gap: 15px;
     justify-items: center;
     align-items: center;
-    height: 230px;
-    padding: 20px;
     
 }
 
@@ -191,7 +236,6 @@ nav ul li a:hover::before{
     font: oblique verdana, sans-serif;
     color: black;
 }
-
 
 .img1{
     grid-area: img1;
@@ -442,7 +486,7 @@ footer{
     color:white;
     font: normal 0,5em arial;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -476,6 +520,7 @@ footer{
         display: block;
         justify-content: center;
     }
+
 }
 
 
@@ -485,8 +530,21 @@ footer{
     }
 
     .logo-oculto{
-        display: block;
+        display: none;
         padding-top: 15px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .menu_hambur{
+    display: block;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;    
     }
 
     header{
@@ -588,16 +646,13 @@ footer{
 
     .img__integridad{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: "img1" "txtq" "img2" "txt2";
-        grid-row-gap: 15px;
-        grid-column-gap: 15px;
+        grid-template-rows: repeat(4, 0,5fr);
+        grid-template-areas: "img1" "txt1" "img2" "txt2";
         justify-items: center;
         align-items: center;
-        height: 480px;
-        padding: 20px;
         
     }
+
 
 /*PRINCIPALES CLIENTES*/
 
