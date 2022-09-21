@@ -1,0 +1,98 @@
+/*INDEX*/
+
+@media screen and (max-width:590px) {
+    .table__container{
+        display: none;  
+    }
+
+    .table__mobile{
+        display: block;
+        justify-content: center;
+    }
+
+}
+
+
+@media screen and (max-width:480px) {
+    header{
+        flex-direction: column;
+    }
+   
+    .logo-visto{
+        display: none;
+    }
+
+    .logo-oculto{
+        display: none;
+        padding-top: 15px;
+    }
+
+    .menu_hambur{
+        display: block;
+    }
+
+    nav{
+        display: none;
+        justify-content: space-around;
+        ul{
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-around;
+            align-items: center;
+            li{
+                font-size: 10px;
+            }
+        }
+    }
+
+    .eslogan{
+        font: nth($font, 9);
+        padding-top: 50px;
+        p{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+    
+    .servicios{
+            h1{
+                font-size: 1.5em;
+            }
+            h3{
+                font-size: 1.1em;
+            }
+    } 
+
+    .table__container{
+        display: none;  
+    }
+
+    .table__mobile{
+        display: block;
+        justify-content: center;
+    }
+
+    .final-pag1{
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+    .tecno{ 
+        text-align: center; 
+        width: 100%;
+    }
+
+    .contacto{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        ul li{
+            text-align: center;
+        }
+    }
+
+    .final-pag2{
+        justify-content: space-around;
+    }
+
+}

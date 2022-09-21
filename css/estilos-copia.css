@@ -1,0 +1,361 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  background-color: #f8f9f9;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+  height: 10%;
+}
+header h1 {
+  font: normal 1.7em Verdana;
+  margin: 0;
+  padding: 25px 0 25px 0;
+  color: #174D4d;
+  text-align: center;
+}
+
+.logo-oculto {
+  display: none;
+}
+
+.logo-visto {
+  padding-top: 15px;
+}
+
+nav {
+  background-color: #f8f9f9;
+  padding-top: 15px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+nav ul li {
+  list-style-type: none;
+  background-color: #f8f9f9;
+  color: #03363d;
+  font: bold 14px Verdana;
+  position: relative;
+  padding: 10px 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #03363d;
+}
+nav ul li a::before {
+  display: block;
+  content: "";
+  width: 0%;
+  background: #03363d;
+  height: 5px;
+  top: 0;
+  position: absolute;
+  transition: width 1s;
+}
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.menu_hambur {
+  display: none;
+}
+.menu_hambur nav {
+  list-style-type: none;
+  background-color: #f8f9f9;
+  color: #03363d;
+  font: bold 14px Verdana;
+  position: relative;
+}
+
+.container-fluid {
+  gap: 15px;
+}
+
+#subir__arriba {
+  width: 45px;
+  height: 45px;
+  background: #94b1b1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  position: fixed;
+  cursor: pointer;
+  display: none;
+  bottom: 1%;
+  right: 1%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#subir__arriba:hover {
+  background: rgb(0, 26, 36);
+  background: linear-gradient(50deg, rgb(0, 26, 36) 0%, rgba(9, 47, 121, 0.1993172269) 28%, rgb(0, 212, 255) 100%);
+  color: white;
+}
+
+.eslogan {
+  font: oblique 1.2em Verdana;
+  color: #03363d;
+  text-align: center;
+  background-color: #FFFFFF;
+  background: -webkit-linear-gradient(top, #94b1b1, #f8f9f9 10%);
+  padding-top: 100px;
+  margin: auto;
+}
+.eslogan p {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.servicios {
+  background: -webkit-linear-gradient(top, #94b1b1, #f8f9f9);
+  padding: 50px 50px;
+}
+.servicios h1 {
+  font: bold 3em Verdana;
+  text-align: center;
+  color: #03363d;
+  padding: 10px 10px;
+}
+.servicios p {
+  font: normal 0.9em Verdana;
+  text-align: justify;
+  color: #03363d;
+  padding: 10px 10px;
+}
+.servicios u {
+  font: normal 0.9em Verdana;
+  text-align: justify;
+  color: #03363d;
+  padding: 10px 10px;
+}
+.servicios ul li {
+  font: normal 0.9em Verdana;
+  text-align: justify;
+  color: #03363d;
+  padding: 10px 10px;
+}
+
+.table__container table, .table__mobile table {
+  font: normal 1em Arial;
+  color: #03363d;
+  text-align: center;
+  background-color: #FFFFFF;
+  margin: auto;
+  width: 90%;
+}
+
+.table__mobile {
+  display: none;
+}
+
+footer {
+  clear: both;
+  background-color: #03363d;
+  background: -webkit-linear-gradient(top, #f8f9f9, #03363d 15%);
+  color: white;
+  padding-top: 40px;
+}
+
+.final-pag1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tecno {
+  font: normal 12px Arial;
+  text-align: left;
+  width: 33%;
+}
+.tecno h2 {
+  text-align: center;
+}
+.tecno p {
+  padding: 20px 20px;
+}
+
+.cumplimiento {
+  font: normal 12px Arial;
+  text-align: left;
+  border: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cumplimiento h2 {
+  text-align: center;
+}
+
+/*GRID*/
+.cumplir {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0, 5fr 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  grid-template-areas: "iso anmat" "iso__img anmat__img" "eu eu" "eu__img eu__img";
+}
+
+.iso {
+  grid-area: iso;
+  font: bold 15px Arial;
+  display: flex;
+  justify-content: center;
+}
+
+.anmat {
+  grid-area: anmat;
+  font: bold 15px Arial;
+  display: flex;
+  justify-content: center;
+}
+
+.eu {
+  grid-area: eu;
+  font: bold 15px Arial;
+  display: flex;
+  justify-content: center;
+}
+
+.iso__img {
+  grid-area: iso__img;
+  display: flex;
+  justify-content: center;
+}
+
+.anmat__img {
+  grid-area: anmat__img;
+  display: flex;
+  justify-content: center;
+}
+
+.eu__img {
+  grid-area: eu__img;
+  display: flex;
+  justify-content: center;
+}
+
+.contacto ul, .contacto li {
+  font: normal 12px Arial;
+  text-align: left;
+  border: 5px;
+  color: white;
+}
+.contacto ul li, .contacto li li {
+  color: white;
+  list-style-type: none;
+  padding: 10px 10px;
+}
+.contacto h2 {
+  text-align: center;
+}
+
+.localizacion {
+  height: 1200px;
+}
+
+.final-pag2 {
+  background-color: #03363d;
+  color: white;
+  font: normal 0.875em Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*INDEX*/
+@media screen and (max-width: 590px) {
+  .table__container {
+    display: none;
+  }
+  .table__mobile {
+    display: block;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+  .logo-visto {
+    display: none;
+  }
+  .logo-oculto {
+    display: none;
+    padding-top: 15px;
+  }
+  .menu_hambur {
+    display: block;
+  }
+  nav {
+    display: none;
+    justify-content: space-around;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav ul li {
+    font-size: 10px;
+  }
+  .eslogan {
+    font: normal 0.9em Verdana;
+    padding-top: 50px;
+  }
+  .eslogan p {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .servicios h1 {
+    font-size: 1.5em;
+  }
+  .servicios h3 {
+    font-size: 1.1em;
+  }
+  .table__container {
+    display: none;
+  }
+  .table__mobile {
+    display: block;
+    justify-content: center;
+  }
+  .final-pag1 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+  }
+  .tecno {
+    text-align: center;
+    width: 100%;
+  }
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contacto ul li {
+    text-align: center;
+  }
+  .final-pag2 {
+    justify-content: space-around;
+  }
+}
+
+/*# sourceMappingURL=estilos-copia.css.map */
