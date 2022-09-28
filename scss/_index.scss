@@ -4,11 +4,26 @@
 
 }
 
+/*MAPA*/
+$estilos: (
+    celeste_claro:#f8f9f9,
+    blanco: white,
+    verde_claro:#174D4d,
+    verde_oscuro:#03363d,
+    celeste_oscuro:#94b1b1,
+    negro:black,
+);
+
+/*MIXINS*/
+@mixin position($display,$content) {
+    display: $display;
+    justify-content: $content;
+}
+
 header{
-    display:flex;
-    background-color: nth($colores ,1);
+    @include position(flex,space-evenly);
+    background-color: map-get($estilos, celeste_claro);
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
     position: sticky;
     height: 10%;
@@ -16,9 +31,17 @@ header{
         font:nth($font , 1);
         margin: 0;
         padding: 25px 0 25px 0;
-        color: nth($colores, 2);
+        color: map-get($estilos, verde_claro);
         text-align: center;
     }
+}
+
+.nuestros-servicios{
+    font:nth($font , 1);
+	margin:0px;
+	padding:25px 0px 25px 0px;
+	color:map-get($estilos, verde_oscuro);
+    text-align: center;
 }
 
 .logo-oculto{
@@ -30,28 +53,27 @@ header{
 }
 
 nav{
-    background-color: nth($colores,1);
+    background-color: map-get($estilos, celeste_claro);
     padding-top: 15px;
     ul{
-        display: flex;
+        @include position(flex,space-around);
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
         li{
             list-style-type: none;
-            background-color: nth($colores, 1);
-            color: nth($colores, 3);
+            background-color: map-get($estilos, celeste_claro);
+            color: map-get($estilos, verde_oscuro);
             font: nth($font, 2);
             position: relative;
             padding: 10px 10px;
             a{
                 text-decoration: none;
-                color: nth($colores, 3);
+                color: map-get($estilos, verde_oscuro);
                 &::before{
                     display: block;
                     content:'';
                     width: 0%;
-                    background: nth($colores, 3);
+                    background: map-get($estilos, verde_oscuro);
                     height: 5px;
                     top: 0;
                     position: absolute;
@@ -69,8 +91,8 @@ nav{
     display: none;
     nav{
         list-style-type: none;
-        background-color: nth($colores, 1);
-        color: nth($colores, 3);
+        background-color: map-get($estilos, celeste_claro);
+        color: map-get($estilos, verde_oscuro);
         font: nth($font, 2);
         position: relative;
     }
@@ -83,11 +105,10 @@ nav{
 #subir__arriba{
     width: 45px;
     height: 45px;
-    background: nth($colores, 6);
-    color: nth($colores, 4);
+    background: map-get($estilos, celeste_oscuro);
+    color: white;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    @include position(flex,center);
     align-items: center;
     font-size: 30px;
     position: fixed;
@@ -104,15 +125,15 @@ html{
 #subir__arriba:hover{
     background: rgb(0,26,36);
     background: linear-gradient(50deg, rgba(0,26,36,1) 0%, rgba(9,47,121,0.19931722689075626) 28%, rgba(0,212,255,1) 100%);
-    color: nth($colores, 4);
+    color: map-get($estilos, blanco);
 }
 
 .eslogan{
     font: nth($font, 3);
-    color: nth($colores, 3);
+    color: map-get($estilos, verde_oscuro);
     text-align: center;
     background-color: nth($colores, 5);
-    background: -webkit-linear-gradient(top, nth($colores, 6), nth($colores, 1) 10%);
+    background: -webkit-linear-gradient(top, map-get($estilos, celeste_oscuro), map-get($estilos, celeste_claro) 10%);
     padding-top: 100px;
     margin: auto;
     p{
@@ -121,39 +142,80 @@ html{
     }
 }
 
+.clientes{
+    @include position(flex,space-around);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.img{
+    @include position(flex,space-around);
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 15px;
+    gap: 20px;
+    img{
+        padding:4px;
+        background:map-get($estilos, verde_oscuro);
+        border-radius:20px;
+        -webkit-transition:-webkit-transform 0.3s ease-in-out 0.1s;
+        -moz-transition:-moz-transform 0.3s ease-in-out 0.1s;
+        -o-transition:-o-transform 0.3s ease-in-out 0.1s;
+        box-shadow:map-get($estilos, verde_oscuro) 5px 5px 10px;
+        &:hover{
+            -webkit-transform:scale(1.2);
+            -moz-transform:scale(1.2);
+            -o-transform: scale(1.2);
+        }
+    }
+}
+
 .servicios{
-    background: -webkit-linear-gradient(top, nth($colores, 6), nth($colores, 1) );
+    background: -webkit-linear-gradient(top, map-get($estilos, celeste_oscuro), map-get($estilos, celeste_claro) );
     padding: 50px 50px;
     h1{
         font: nth($font, 4);   
         text-align: center;
-        color: nth($colores, 3);
+        color: map-get($estilos, verde_oscuro);
+        padding: 10px 10px;
+
+    }
+    h3{
+        font: nth($font, 11);   
+        text-align: center;
+        color: map-get($estilos, verde_oscuro);
         padding: 10px 10px;
 
     }
     p{
         font: nth($font, 9);
         text-align: justify;
-        color: nth($colores, 3);
+        color: map-get($estilos, verde_oscuro);
         padding: 10px 10px;
     }
     u{
         font: nth($font, 9);
         text-align: justify;
-        color: nth($colores, 3);
+        color: map-get($estilos, verde_oscuro);
         padding: 10px 10px;
     }
     ul li{
         font: nth($font, 9);
         text-align: justify;
-        color: nth($colores, 3);
+        color: map-get($estilos, verde_oscuro);
         padding: 10px 10px;
     }
 }
 
-.table__container table, .table__mobile table{
+.items li{
+    font: nth($font, 9);
+}
+
+
+.table__container table, .table__mobile table, .servicios__conteos table{
     font: nth($font, 5);
-    color: nth($colores, 3);
+    color: map-get($estilos, verde_oscuro);
     text-align: center;
     background-color: nth($colores, 5);
     margin: auto;
@@ -164,19 +226,131 @@ html{
     display: none;
 }
 
+.integridad{
+    display: flex;
+    flex-direction: column;
+}
+
+.img__integridad{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0,5fr 0,5fr;
+    grid-template-areas: "img1 img2" "txt1 txt2";
+    justify-items: center;
+    align-items: center;
+    p{
+        font: oblique verdana, sans-serif;
+        color:map-get($estilos, negro);
+    }
+}
+
+.img1{
+    grid-area: img1;
+    display: flex;
+    justify-content: center;
+}
+
+.img2{
+    @extend .img1;
+    grid-area: img2;
+}
+
+.txt1{
+    @extend .img1;
+    grid-area: txt1;
+}
+
+.txt2{
+    @extend .img1; 
+    grid-area: txt2;
+}
+
+.imgs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 10px;
+    p{
+        font: oblique verdana, sans-serif;
+        color:map-get($estilos, negro);
+    }
+}
+
+.img__conteos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img3" "img4";
+    grid-row-gap: 10px;
+    grid-column-gap: 5px;
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+    figure{
+        @include position(flex,center);
+    }
+    p{
+        font: oblique verdana, sans-serif;
+        color:map-get($estilos, negro);
+    }
+}
+
+.img3{
+    @extend .img1;
+    grid-area: img3;
+}
+
+.img4{
+    @extend .img1;
+    grid-area: img4;
+}
+
+.txt3{
+    @extend .img1;
+    grid-area: txt3;
+    font: oblique verdana, sans-serif;
+    color:map-get($estilos, negro);
+}
+
+.sub-servicios,.sub-servicios-a,.sub-servicios-b{
+    @include position(flex,space-around);
+    align-items: center;
+    p{
+        width: 50%;
+        font-family: 2em;
+    }
+}
+
+.sub-servicios-b ul li{
+    @include position(flex,center);
+    align-items: center;
+}
+
+.servicios__conteos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.calificacion{
+    width: 100%;
+    display: block;
+    color:map-get($estilos, verde_oscuro);
+}
+
 footer{
     clear: both;
-    background-color: nth($colores, 3);
-    background:-webkit-linear-gradient(top, nth($colores, 1), nth($colores, 3) 15%);
-    color: nth($colores, 4);
+    background-color: map-get($estilos, verde_oscuro);
+    background: -webkit-linear-gradient(top, map-get($estilos, celeste_claro), map-get($estilos, verde_oscuro) 15%);
+    color: map-get($estilos, blanco);
     padding-top: 40px;
 }
 
 .final-pag1{
-    display: flex;
+    @include position(flex,space-around);
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .tecno{ 
@@ -221,35 +395,27 @@ footer{
 .iso{
     grid-area: iso;
     font: nth($font, 7);
-    display: flex;
-    justify-content: center;
+    @include position(flex,center);
 }
 .anmat{
+    @extend .iso;
     grid-area: anmat;
-    font: nth($font, 7);
-    display: flex;
-    justify-content: center;
 }
 .eu{
+    @extend .iso;
     grid-area: eu;
-    font: nth($font, 7);
-    display: flex;
-    justify-content: center;
 }
 .iso__img{
     grid-area: iso__img;
-    display: flex;
-    justify-content: center;
+    @include position(flex,center);
 }
 .anmat__img{
     grid-area: anmat__img;
-    display: flex;
-    justify-content: center;
+    @include position(flex,center);
 }
 .eu__img{
     grid-area: eu__img;
-    display: flex;
-    justify-content: center;
+    @include position(flex,center);
 }
 
 .contacto{
@@ -257,9 +423,9 @@ footer{
         font: nth($font, 6);
         text-align: left; 
         border: 5px;
-        color: nth($colores, 4);
+        color: map-get($estilos, blanco);
         li{
-            color: nth($colores, 4);
+            color: map-get($estilos, blanco);
             list-style-type: none;
             padding: 10px 10px;
         }
@@ -274,10 +440,9 @@ footer{
 }
 
 .final-pag2{
-    background-color: nth($colores, 3);
-    color:nth($colores, 4);
+    background-color: map-get($estilos, verde_oscuro);
+    color:map-get($estilos, blanco);
     font: nth($font, 8);
-    display: flex;
-    justify-content: center;
+    @include position(flex,center);
     align-items: center;
 }

@@ -1,4 +1,11 @@
+/*MIXINS*/
+@mixin position($display,$content) {
+    display: $display;
+    justify-content: $content;
+}
+
 /*INDEX*/
+
 
 @media screen and (max-width:590px) {
     .table__container{
@@ -13,7 +20,7 @@
 }
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:590px) {
     header{
         flex-direction: column;
     }
@@ -35,9 +42,8 @@
         display: none;
         justify-content: space-around;
         ul{
-            display: flex;
+            @include position(flex,space-around);
             flex-direction: column; 
-            justify-content: space-around;
             align-items: center;
             li{
                 font-size: 10px;
@@ -93,6 +99,63 @@
 
     .final-pag2{
         justify-content: space-around;
+    }
+
+/*QUIENES SOMOS*/
+
+    .sub-servicios, .sub-servicios-a, .sub-servicios-b{
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 15px;
+        p{
+            width: 100%;
+        }
+    }
+
+    .sub-servicios-a{
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .servicios h3{
+        padding-top: 40px;
+    }
+    .sub-servicios-b ul li{
+        padding: 5px;
+    }
+
+/*NUESTROS SERVICIOS*/
+
+    .img__integridad{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 0,5fr);
+        grid-template-areas: "img1" "txt1" "img2" "txt2";
+        justify-items: center;
+        align-items: center;   
+    }
+
+/*PRINCIPALES CLIENTES*/
+
+    .clientes{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+/*CLIENTES*/ /*ES CONTACTOS*/
+
+    .contactos{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        h3{
+        padding-top: 0;
+        }
+    }
+
+    .localizacion{
+        width: 95%;
+        height: 90%;
     }
 
 }
