@@ -443,6 +443,16 @@ footer {
     display: block;
     justify-content: center;
   }
+  .table__container table, .table__mobile table, .servicios__conteos table {
+    font: normal 1em Arial;
+  }
+  .subir__arriba {
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    bottom: 5%;
+    right: 5%;
+  }
 }
 @media screen and (max-width: 590px) {
   header {
@@ -513,6 +523,9 @@ footer {
     justify-content: space-around;
   }
   /*QUIENES SOMOS*/
+  main {
+    overflow-x: auto;
+  }
   .sub-servicios, .sub-servicios-a, .sub-servicios-b {
     flex-direction: column;
     gap: 30px;
