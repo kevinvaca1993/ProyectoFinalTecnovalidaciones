@@ -1,0 +1,5 @@
+/*MIXINS*/
+@mixin position($display,$content) {
+    display: $display;
+    justify-content: $content;
+}

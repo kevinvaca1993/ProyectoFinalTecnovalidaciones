@@ -1,12 +1,4 @@
-/*MIXINS*/
-@mixin position($display,$content) {
-    display: $display;
-    justify-content: $content;
-}
-
 /*INDEX*/
-
-
 @media screen and (max-width:590px) {
     .table__container{
         display: none;  

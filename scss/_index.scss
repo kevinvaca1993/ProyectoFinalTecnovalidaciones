@@ -14,12 +14,6 @@ $estilos: (
     negro:black,
 );
 
-/*MIXINS*/
-@mixin position($display,$content) {
-    display: $display;
-    justify-content: $content;
-}
-
 header{
     @include position(flex,space-evenly);
     background-color: map-get($estilos, celeste_claro);
