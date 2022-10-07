@@ -1,10 +1,11 @@
+@charset "UTF-8";
 /*MIXINS*/
+/*MAPA*/
 * {
   margin: 0px;
   padding: 0;
 }
 
-/*MAPA*/
 header {
   display: flex;
   justify-content: space-evenly;
@@ -171,6 +172,12 @@ html {
   color: #03363d;
   padding: 10px 10px;
 }
+.servicios h2 {
+  font: bold 1.75em Verdana;
+  text-align: center;
+  color: #03363d;
+  padding: 10px 10px;
+}
 .servicios h3 {
   font: bold 1.75em Verdana;
   text-align: center;
@@ -207,6 +214,9 @@ html {
   background-color: #FFFFFF;
   margin: auto;
   width: 90%;
+  border-style: solid;
+  border-color: black;
+  border-width: medium;
 }
 
 .table__mobile {
@@ -342,12 +352,18 @@ footer {
   font: normal 12px Arial;
   text-align: left;
   width: 33%;
+  justify-content: center;
 }
 .tecno h2 {
   text-align: center;
 }
 .tecno p {
   padding: 20px 20px;
+}
+.tecno .logo-visto {
+  justify-content: center;
+  padding-top: 10%;
+  padding-left: 25%;
 }
 
 .cumplimiento {
@@ -420,8 +436,12 @@ footer {
   text-align: center;
 }
 
-.localizacion {
-  height: 1200px;
+.contactos {
+  justify-content: center;
+}
+.contactos .localizacion {
+  padding: 10px 10px;
+  text-align: center;
 }
 
 .final-pag2 {
@@ -434,7 +454,7 @@ footer {
 }
 
 /*INDEX*/
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 900px) {
   .table__container {
     display: none;
   }
@@ -453,7 +473,7 @@ footer {
     right: 5%;
   }
 }
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 900px) {
   header {
     flex-direction: column;
   }
@@ -491,8 +511,11 @@ footer {
   .servicios h1 {
     font-size: 1.5em;
   }
-  .servicios h3 {
+  .servicios h2 {
     font-size: 1.1em;
+  }
+  .servicios h3 {
+    font-size: 0.9em;
   }
   .table__container {
     display: none;
@@ -529,6 +552,8 @@ footer {
     flex-direction: column;
     gap: 30px;
     padding-top: 15px;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
   .sub-servicios p, .sub-servicios-a p, .sub-servicios-b p {
     width: 100%;
@@ -558,6 +583,12 @@ footer {
     gap: 15px;
   }
   /*CLIENTES*/ /*ES CONTACTOS*/
+  .contacto ul, .contacto li {
+    font-size: 1.1em;
+  }
+  .contacto h2 {
+    text-align: center;
+  }
   .contactos {
     display: flex;
     flex-direction: column;
@@ -571,5 +602,78 @@ footer {
     height: 90%;
   }
 }
+@media screen and (max-width: 360px) {
+  .table__mobile table {
+    font: normal 0.875em Arial;
+  }
+  .contacto ul, .contacto li {
+    font-size: 0.8em;
+  }
+  .contacto h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 330px) {
+  .table__mobile table {
+    font: normal 0.7em Arial;
+  }
+}
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello.eot?43545752");
+  src: url("../font/fontello.eot?43545752#iefix") format("embedded-opentype"), url("../font/fontello.woff2?43545752") format("woff2"), url("../font/fontello.woff?43545752") format("woff"), url("../font/fontello.ttf?43545752") format("truetype"), url("../font/fontello.svg?43545752#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?43545752#fontello') format('svg');
+  }
+}
+*/
+[class^=icon-]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-mail:before {
+  content: "\e800";
+} /* '' */
+.icon-phone:before {
+  content: "\e801";
+} /* '' */
+.icon-location:before {
+  content: "\e802";
+} /* '' */
+.icon-home-outline:before {
+  content: "\e803";
+} /* '' */
 
 /*# sourceMappingURL=estilos-copia.css.map */

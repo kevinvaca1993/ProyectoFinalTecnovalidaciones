@@ -4,16 +4,6 @@
 
 }
 
-/*MAPA*/
-$estilos: (
-    celeste_claro:#f8f9f9,
-    blanco: white,
-    verde_claro:#174D4d,
-    verde_oscuro:#03363d,
-    celeste_oscuro:#94b1b1,
-    negro:black,
-);
-
 header{
     @include position(flex,space-evenly);
     background-color: map-get($estilos, celeste_claro);
@@ -175,6 +165,13 @@ html{
         padding: 10px 10px;
 
     }
+    h2{
+        font: nth($font, 11);   
+        text-align: center;
+        color: map-get($estilos, verde_oscuro);
+        padding: 10px 10px;
+
+    }
     h3{
         font: nth($font, 11);   
         text-align: center;
@@ -214,6 +211,9 @@ html{
     background-color: nth($colores, 5);
     margin: auto;
     width: 90%;
+    border-style: solid;
+    border-color: nth($colores, 7);
+    border-width: medium;
 }
 
 .table__mobile{
@@ -351,11 +351,17 @@ footer{
     font: nth($font, 6);
     text-align: left; 
     width: 33%;
+    justify-content: center;
     h2{
         text-align: center;
     }
     p{
         padding: 20px 20px;
+    }
+    .logo-visto{
+        justify-content: center;
+        padding-top: 10%;
+        padding-left: 25%;
     }
 }
 
@@ -429,8 +435,12 @@ footer{
     }
 }
 
-.localizacion{
-    height: 1200px;
+.contactos{
+    justify-content: center;
+    .localizacion{
+        padding: 10px 10px;
+        text-align: center; 
+    }
 }
 
 .final-pag2{

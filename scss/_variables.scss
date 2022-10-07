@@ -3,3 +3,38 @@
     display: $display;
     justify-content: $content;
 }
+
+/*MAPA*/
+$estilos: (
+    celeste_claro:#f8f9f9,
+    blanco: white,
+    verde_claro:#174D4d,
+    verde_oscuro:#03363d,
+    celeste_oscuro:#94b1b1,
+    negro:black,
+);
+
+$colores:
+#f8f9f9,
+#174D4d,
+#03363d,
+white,
+#FFFFFF,
+#94b1b1,
+black;
+
+$font:
+normal 1.7em Verdana,
+bold 14px Verdana,
+oblique 1.2em Verdana,
+bold 3em Verdana,
+normal 1em Arial,
+normal 12px Arial,
+bold 15px Arial,
+normal .875em Arial,
+normal 0.9em Verdana,
+normal 1.5em Arial,
+bold 1.75em Verdana,
+normal 1em Arial,
+normal 0.7em Arial;
+
